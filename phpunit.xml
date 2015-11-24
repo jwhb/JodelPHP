@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         processIsolation="false"
-         stopOnFailure="false"
-         syntaxCheck="false">
-    <testsuites>
-        <testsuite name="JodelPHP Test Suite">
-            <directory suffix=".php">./tests/</directory>
-        </testsuite>
-    </testsuites>
+<phpunit backupGlobals="false" backupStaticAttributes="false"
+	bootstrap="vendor/autoload.php" colors="true"
+	convertErrorsToExceptions="true" convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true" processIsolation="false"
+	stopOnFailure="false" syntaxCheck="false">
+	<testsuites>
+		<testsuite name="JodelPHP Test Suite">
+			<directory suffix=".php">./tests/</directory>
+		</testsuite>
+	</testsuites>
+	<php>
+		<const name="JODEL_API_URL" value="https://api.go-tellm.com/api/v2" />
+	</php>
 </phpunit>
