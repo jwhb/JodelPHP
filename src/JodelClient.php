@@ -16,7 +16,10 @@ class JodelClient
 
     function __construct($api_url)
     {
-        $this->default_template = Request::init();
+        $this->default_template = Request::init()->addHeader('Connection', 'keep-alive')
+            ->addHeader('Accept-Encoding', 'gzip')
+            ->addHeader('Content-Type', 'application/json; charset=UTF-8')
+            ->addHeader('User-Agent', 'Jodel/65000 Dalvik/2.1.0 (Linux; U; Android 5.1.1; D6503 Build/23.4.A.1.232)');
         $this->set_template($this->default_template);
     }
 
@@ -62,6 +65,11 @@ class JodelClient
     }
 
     public function login()
+    {
+        Request::get();
+    }
+
+    private function request_access_token()
     {}
 }
 
