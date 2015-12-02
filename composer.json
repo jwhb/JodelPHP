@@ -18,6 +18,9 @@
     "autoload": {
         "psr-4": {
             "JWhy\\JodelPHP\\": "src"
-        }
+        },
+		"psr-0":{
+			"src":""
+		}
     }
 }
