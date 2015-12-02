@@ -1,5 +1,4 @@
 <?php
-
 namespace JWhy\JodelPHP;
 
 class JodelPost
